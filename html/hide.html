@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hide function Jquery</title>
+    <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+    <style>
+        div {
+            background: #ece023;
+            width: 30px;
+            height: 40px;
+            margin: 2px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<script>
+    for (var i = 0; i < 5; i++) {
+        $("<div>").appendTo(document.body);
+    }
+    $("div").click(function () {
+        $(this).hide(2000, function () {
+            $(this).remove();
+        });
+    });
+</script>
+</body>
+</html>
